@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .container{
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+} */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url(./assets/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+}
+
+.app {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 50px;
+}
+.home{
+    width: 100%;
+    font-family: monospace;
+    font-size: 70px;
+}
+.home .titulo h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.home .titulo p{
+    font-size: 21px;
+    line-height: 33px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.home .micv a{
+    background-color: #20eb64;
+    text-decoration: none;
+    box-shadow: 5px 5px 0.5px  #20eb6480;
+    color: #000;
+    font-weight: bold;
+    font-family: monospace;
+    border: 3px solid #fff;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #09090984;
+    padding: 30px 60px;
+    line-height: 35px;
+}
+.navbar-mobile{
+    display: none;
+    background: #09090984;
+    padding: 30px 60px;
+}
+.navbar .logo a{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+.navbar .logo svg{
+    position: relative;
+    top: 5px;
+}
+.navbar a {
+    font-family: monospace;
+    font-size: 17px;
+    color: #9ae3c9;
+    text-decoration: none;
+    margin: 0 16px;
+
+}
+.projects{
+    line-height: 40px;
+}
+.project-card {
+    background: #1f1f1f84;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.project-card a {
+    color: #4fc3f7;
+}
+.contact h2{
+    font-size: 30px;
+}
+
+.contenedor{
+    display: flex;
+}
+.enlaces, .formulario{
+    display: block;
+    width: 100%;
+}
+.enlaces ul, .formulario form{
+    list-style: none;
+}
+.enlaces ul li a{
+    text-decoration: none;
+    color: #f0f0f0;
+}
+.enlaces ul div{
+    margin: 40px 0px;
+}
+.enlaces ul div label{
+    color: #00ea98;
+    font-size: 20px;
+    font-weight: bold;
+}
+.enlaces ul div li{
+    margin: 10px 0px;
+}
+.enlaces ul div li a:hover{
+    color: #4fc3f7;
+    transition: color .3s ease;
+}
+.enlaces ul .micv a{
+    background-color: #20eb64;
+    text-decoration: none;
+    box-shadow: 5px 5px 0.5px  #20eb6480;
+    color: #000;
+    font-weight: bold;
+    font-family: monospace;
+    border: 3px solid #fff;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formulario form input, .formulario form textarea{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #4fc3f7;
+    padding: 10px;
+    font-size: 16px;
+    font-family: monospace;
+    color: #f0f0f0;
+    outline: none;
+}
+.formulario form button{
+    width: 180px;
+    padding: 20px 50px;
+    background-color: #20eb64;
+    text-decoration: none;
+    color: #000;    
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer {    
+    width: 100%;
+    background: #090909cd;
+    padding: 25px 50px;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+@media screen and (260px <= width <= 700px) {
+    .container{
+    height: 100vh;
+}
+    .navbar{
+        display: none;
+    }
+    .navbar-mobile{
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 25px;
+        line-height: 35px;
+        position: fixed;
+        width: 100%;
+        background-color: #090909;
+    }    
+    .navbar-mobile ul{
+        font-size: 25px;
+    }
+    .navbar-mobile ul svg{
+        position: relative;
+        top: 6px;
+    }
+    .navbar-mobile ul, .navbar-mobile ul a{
+        color: #9ae3c9;
+    }
+    .navbar-mobile ul a{
+        text-decoration: none;
+        font-family: monospace;
+    }
+    .navbar-mobile .links-mobile{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 97px;
+        left: 0px;
+        width: 80%;
+        background-color: #090909;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    .navbar-mobile .links-mobile.active{
+        transform: translateX(0);
+    }
+    .navbar-mobile .links-mobile a{
+        padding: 20px 40px;
+        border-bottom: 1px solid #4fc2f75b;
+    }
+    .app {
+        position: relative;
+        top: 97px;
+        margin-bottom: 97px;
+        padding: 0px;
+    }
+    .home .titulo p{
+        line-height: 33px;
+    }
+    .home, .contact{
+        padding: 35px 15px;
+    }
+    .projects{
+        padding: 30px 10px;
+        line-height: 40px;
+    }
+    .home{        
+        font-size: 50px;
+    }
+    .home .titulo p{
+        font-size: 18px;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+    .formulario{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
