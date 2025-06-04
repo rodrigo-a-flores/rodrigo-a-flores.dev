@@ -233,6 +233,7 @@ footer {
     }
     .navbar-mobile .links-mobile a{
         padding: 20px 40px;
+        font-size: 17px;
         border-bottom: 1px solid #4fc2f75b;
     }
     .app {
